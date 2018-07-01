@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@bg:#F3FAFE;
+@width: 300px;
+@height: 30px;
+/*
+less支持两种混合，
+一种是类混合，
+  为了复用类选择器的样式
+一种是id混合
+  为了复用id选择器的样式
+ */
+/* .link-1:hover{
+  color:red;
+}
+.link-2>li:first-child{
+  .link-1:hover;
+} */
+.link-1,.link-2{
+  width: @width;
+  height: @height;
+  line-height:@height;
+  padding: 0 8px;
+  margin:20px 0;
+  &:hover{
+    background-color:@bg;
+  }
+  li{
+    float: left;
+    margin-right: 20px;
+    &:hover{
+      color:red;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+//混合
+.link-3{
+  .link-1;
+  li:hover{
+    color:green;
+  };
+}

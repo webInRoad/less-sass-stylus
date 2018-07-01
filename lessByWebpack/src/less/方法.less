@@ -1,0 +1,33 @@
+*{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+.module(@w,@h:100px){
+  width: @w;
+  height: @h;
+  border: 1px solid #eee;
+}
+.box-shadow(@bs){
+  -webkit-box-shadow:@bs;
+  -moz-box-shadow:@bs;
+  -ms-box-shadow:@bs;
+  -o-box-shadow:@bs;
+  box-shadow: @bs;
+}
+.border-top(@w,@s,@c){
+  border-top:@arguments;//@arguments 获取所有参数
+}
+.module-1{
+  .module(200px,50px);
+  .box-shadow(10px 10px red);
+  .border-top(10px,solid,blue);
+}
+.module-2{
+  .module(300px,100px);
+  margin:20px 0;
+}
+.module-3{
+  .module(150px)!important;//提高权重，此时方法中的每一个样式都将被提高权重
+  border-width:20px;
+}

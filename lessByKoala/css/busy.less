@@ -3,8 +3,8 @@ body{
     // background-color: red;
 }
 
-/*注释方式有这两种 我是被编译的*/
-//不会被编译
+/*注释方式有这两种 我是会被编译的注释方式*/
+//我是不会被编译的注释方式
 
 //less中的变量
 //less中 想声明变量的话 一定要用@开头 例如:@变量名:值;
@@ -30,7 +30,7 @@ body{
   border:@border_width solid pink;
 }
 .test_argument{
-  .box;//不带参数
+  .box;//不带参数(没有括号)
   .border_02(50px);//带参数的
 }
 //混合 - 默认值

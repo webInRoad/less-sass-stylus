@@ -1,0 +1,40 @@
+//定义色彩
+@bg:#3d94d9;
+@color:#fff;
+@hoverBg:#cae1ee;
+@hoverColor:#0d519c;
+//单位长度
+@space:20px;
+*{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+@navWidth:@space*2;
+div{
+  padding:@space/2 @space;
+  width: @navWidth * 3 + (@space/4)*3;
+  background-color: @bg;
+  ul{
+    overflow: hidden;
+    li{
+      margin-right: @space/4;
+      float:left;
+      text-align: center;
+      a{
+        width:@navWidth;
+        height: @space;
+        line-height: @space;
+        color:@color;
+        text-decoration: none;
+        display: inline-block;
+        // 选择器内部设置伪类
+        &:hover{
+          background-color: @hoverBg;
+          color:@hoverColor;
+        }
+      }
+    }
+  }
+}
+
